@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1830">
+  <meta name="description" content="JUMA COMMUNICATION — All-in-One Business & Services. Money transfer, electronics, installment sales, bill payments and digital services.">
+  <title>JUMA COMMUNICATION | All-in-One Business & Services</title>
+  <style>
+    :root{
+      --navy:#0b1830;--navy2:#122747;--green:#18a66a;--mint:#e9f8f1;
+      --gold:#e8bd69;--ink:#172338;--muted:#68758a;--line:#e6ebf1;
+      --paper:#f5f8fc;--white:#fff;--shadow:0 18px 50px rgba(11,24,48,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .topline{background:#071225;color:#dce7f5;text-align:center;padding:9px 12px;font-size:13px;letter-spacing:.2px}
+    header{background:linear-gradient(135deg,var(--navy),#17385c);color:white;overflow:hidden;position:relative}
+    header:after{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-120px;top:-190px;box-shadow:0 0 0 45px rgba(255,255,255,.025),0 0 0 90px rgba(255,255,255,.02)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;position:relative;z-index:1}
+    .brand-small{font-weight:850;letter-spacing:1.3px;font-size:17px}
+    .navlinks{display:flex;gap:22px;font-size:13px;color:#dce7f5}
+    .hero{padding:54px 0 76px;position:relative;z-index:1;text-align:center}
+    .prayer{display:inline-block;color:#f4dba9;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:9px 17px;border-radius:999px;font-size:18px;margin-bottom:23px}
+    .eyebrow{color:#9edfc0;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
+    h1{font-size:clamp(35px,7vw,65px);line-height:1.08;letter-spacing:1px;margin:12px 0 8px;font-weight:900}
+    .tagline{font-size:clamp(17px,3vw,23px);font-weight:650;color:#f3f6fb;margin:10px 0 17px}
+    .services-line{color:#d5e1ef;font-size:clamp(13px,2.2vw,16px);letter-spacing:.2px;max-width:800px;margin:0 auto}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:12px;font-weight:750;font-size:14px;transition:.2s}
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 9px 24px rgba(24,166,106,.25)}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .trustbar{background:white;box-shadow:var(--shadow);border-radius:18px;margin:-27px auto 48px;position:relative;z-index:2;padding:18px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+    .trustbar strong{display:block;color:var(--navy);font-size:14px}
+    .trustbar span{font-size:12px;color:var(--muted)}
+    section{padding:18px 0 46px}
+    .section-head{text-align:center;margin-bottom:25px}
+    .section-head .kicker{color:var(--green);font-weight:850;text-transform:uppercase;letter-spacing:2px;font-size:11px}
+    h2{font-size:clamp(25px,4vw,34px);color:var(--navy);margin:5px 0 7px;line-height:1.2}
+    .section-head p{color:var(--muted);margin:0;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:white;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 8px 25px rgba(11,24,48,.035)}
+    .icon{width:43px;height:43px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-size:21px;margin-bottom:13px}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .card ul{margin:10px 0 0;padding-left:18px;color:#536176;font-size:13px}
+    .about{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center}
+    .about p{color:var(--muted);font-size:14px;margin:9px 0}
+    .promise{background:linear-gradient(135deg,var(--navy),#1c4266);border-radius:17px;padding:24px;color:white}
+    .promise h3{margin:0 0 8px;font-size:19px}
+    .promise p{color:#d5e1ef;margin:0;font-size:13px}
+    .contact{background:var(--navy);color:white;border-radius:22px;padding:32px;text-align:center}
+    .contact h2{color:white}
+    .contact p{color:#d5e1ef;font-size:14px}
+    .contact-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:20px}
+    .contact .btn-outline{border-color:#6e829e}
+    .phone{font-size:20px;font-weight:850;letter-spacing:.7px;margin:8px 0}
+    footer{text-align:center;color:#7c899b;font-size:12px;padding:25px 10px 32px}
+    .note{font-size:11px!important;color:#9aabc0!important;max-width:780px;margin:18px auto 0!important}
+    @media(max-width:760px){
+      .navlinks{gap:12px;font-size:12px}
+      .hero{padding:43px 0 65px}
+      .grid{grid-template-columns:1fr 1fr}
+      .about{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .navlinks a:nth-child(2){display:none}
+      .trustbar{grid-template-columns:1fr;margin-bottom:35px;gap:13px}
+      .trustbar div{border-bottom:1px solid var(--line);padding-bottom:10px}
+      .trustbar div:last-child{border:0;padding:0}
+      .grid{grid-template-columns:1fr}
+      .card{padding:19px}
+      .about,.contact{padding:23px}
+      .prayer{font-size:15px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">Your trusted local partner for business, payments and everyday services</div>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand-small">JUMA COMMUNICATION</div>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="prayer" lang="ar" dir="rtl">🩶 إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ 🩶</div>
+        <div class="eyebrow">Welcome to</div>
+        <h1>JUMA COMMUNICATION</h1>
+        <div class="tagline">All-in-One Business &amp; Services</div>
+        <p class="services-line">Money Transfer <span>•</span> Electronics <span>•</span> Installments <span>•</span> Digital Services</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/923336633173" target="_blank" rel="noopener">Contact on WhatsApp</a>
+          <a class="btn btn-outline" href="#services">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="trustbar" aria-label="Business highlights">
+      <div><strong>Multiple Services</strong><span>Convenience under one roof</span></div>
+      <div><strong>Customer Support</strong><span>Friendly and helpful service</span></div>
+      <div><strong>Clear Transactions</strong><span>Transparent details and receipts</span></div>
+    </div>
+
+    <section id="services">
+      <div class="section-head">
+        <div class="kicker">What we offer</div>
+        <h2>Our Services</h2>
+        <p>Useful business and everyday services in one place.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">💸</div>
+          <h3>Money Transfer &amp; Payments</h3>
+          <p>Convenient payment and money-transfer assistance through available authorized channels.</p>
+          <ul><li>JazzCash &amp; Easypaisa services</li><li>Send and receive money</li><li>Cash in / cash out</li><li>Raast and QR payment assistance</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">🏦</div>
+          <h3>Banking &amp; Bill Services</h3>
+          <p>Help with everyday payment and transfer needs.</p>
+          <ul><li>Bank transfer assistance</li><li>Utility bill payments</li><li>CNIC transfer assistance</li><li>Online payment assistance</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">📱</div>
+          <h3>Mobile Load &amp; Packages</h3>
+          <p>Mobile balance and package services for supported networks.</p>
+          <ul><li>Mobile load</li><li>Call, SMS and internet packages</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">🧊</div>
+          <h3>Electronics &amp; Appliances</h3>
+          <p>Buying and selling a range of useful electronics and household products.</p>
+          <ul><li>Mobile phones and accessories</li><li>Air conditioners</li><li>Refrigerators and washing machines</li><li>Other home electronics</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">🛒</div>
+          <h3>Installment Plans</h3>
+          <p>Selected products may be available on installments with clear agreed terms.</p>
+          <ul><li>Electronics on installments</li><li>Household appliances</li><li>Product-specific payment schedules</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon">💳</div>
+          <h3>Digital &amp; Card Assistance</h3>
+          <p>Guidance for selected digital services and payment-related needs.</p>
+          <ul><li>QR payment assistance</li><li>Account opening guidance</li><li>Card payment assistance</li><li>Online service support</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head">
+        <div class="kicker">Who we are</div>
+        <h2>About JUMA COMMUNICATION</h2>
+        <p>One name for a range of useful services.</p>
+      </div>
+      <div class="about">
+        <div>
+          <h3 style="margin:0;color:#0b1830">All-in-One Business &amp; Services</h3>
+          <p>JUMA COMMUNICATION brings together payment assistance, mobile services, electronics, installment sales and digital-service support. Our aim is to make everyday tasks easier by offering convenient services in one place.</p>
+          <p>We value clear information, respectful customer service and transparent terms for every transaction and sale.</p>
+        </div>
+        <div class="promise">
+          <h3>Your Trusted Service Partner</h3>
+          <p>Money Transfer • Electronics • Installments • Digital Services</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Contact JUMA COMMUNICATION</h2>
+        <p>For service details, product availability and installment information, contact us.</p>
+        <div class="phone">0333 6633173</div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://wa.me/923336633173" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-outline" href="tel:+923336633173">Call Now</a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-outline" href="https://www.facebook.com/profile.php?id=61592753082258" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn btn-outline" href="https://youtube.com/@ansar_ali_juma_official" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/ansar_ali_juma_official?srtk=MWh4dGpmMTBkazd0MA==" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-outline" href="https://www.tiktok.com/@ansar_ali_juma_official?_r=1&amp;_t=ZS-9BQL19WzZif" target="_blank" rel="noopener">TikTok</a>
+        </div>
+        <p class="note">Financial transactions, wallet services, bill collection and other regulated services are provided only where available through authorized providers and applicable approvals. Product availability, installment terms and conditions are confirmed at the time of sale.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>JUMA COMMUNICATION</strong><br>
+    All-in-One Business &amp; Services<br>
+    © <span id="year">2026</span> JUMA COMMUNICATION. All rights reserved.
+  </footer>
+</body>
+</html>
